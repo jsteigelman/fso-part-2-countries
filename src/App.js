@@ -28,6 +28,7 @@ const App = () => {
         countries={countries}
         setFilteredCountries={setFilteredCountries}
       />
+      
       <h2>Results</h2>
       <CountryList filteredCountries={filteredCountries} />
     </div>
