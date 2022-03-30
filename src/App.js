@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react'
-
+import CountryList from './Components/CountryList'
+import SearchForm from './Components/SearchForm'
 const axios = require('axios')
-
-const Country = ({country}) => {
-  return (
-    <li key={country.name.common}>{country.name.common}</li>
-  )
-}
 
 const App = () => {
   const [countries, setCountries] = useState([])
@@ -22,31 +17,19 @@ const App = () => {
     })
   }, [])
 
-  const handleFilter = (event) => {
-    const userFilter = event.target.value
-    setSearchTerm(userFilter)
-  }
-
-  const applyFilter = (event) => {
-    event.preventDefault()
-    const myFilter = countries.filter((countryObject) => {
-      return countryObject.name.common.includes(searchTerm)
-    })
-    setFilteredCountries(myFilter)
-    setSearchTerm('')
-  }
-
-  const displayCountries = filteredCountries.map((country) => <Country country={country} />)
-
   return (
     <div>
-      <p>Search Countries</p>
-      <form onSubmit={applyFilter}>
-        <input type='text' value={searchTerm} onChange={handleFilter} />
-      </form>
-      <div>
-      {displayCountries}
-      </div>
+      <h1>Country Search App</h1>
+
+      <h2>Search </h2>
+      <SearchForm
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        countries={countries}
+        setFilteredCountries={setFilteredCountries}
+      />
+      <h2>Results</h2>
+      <CountryList filteredCountries={filteredCountries} />
     </div>
   )
 }
