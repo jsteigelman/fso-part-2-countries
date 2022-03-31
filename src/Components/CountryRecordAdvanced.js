@@ -15,8 +15,9 @@ const CountryRecordAdvanced = ({ country }) => {
       <p>Area: {country.area}</p>
       <p>The languages spoken include:</p>
       <ul>{listLanguages()}</ul>
-      <img src={country.flags.png} alt='The country flag' />
-      <img src={country.coatOfArms.png} alt="The country's coat of arms" />
+      <img src={country.flags.png} alt='The country flag' width="200"/>
+      <br />
+      <img src={country.coatOfArms.png} alt="The country coat of arms" width="100" />
     </div>
   )
 }
