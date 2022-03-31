@@ -9,8 +9,10 @@ const Country = ({ country, expandObject }) => {
     const toggleExpand = () => {
         setExpand(!expand)
     } 
-
-    const displayRecord = expand ? (<CountryRecordAdvanced country={country} />) : (<div> <CountryRecordBasic country={country} expandObject={expandObject} /> <button onClick={toggleExpand}>Show Full Record</button> </div>)
+    
+    const fullRecord = <div><CountryRecordAdvanced country={country} /><button onClick={toggleExpand}>Collapse Record</button></div>
+    const partialRecord = <div><CountryRecordBasic country={country} expandObject={expandObject} /> <button onClick={toggleExpand}>Show Full Record</button></div>
+    const displayRecord = expand ? (fullRecord) : (partialRecord)
 
   return (
     displayRecord
