@@ -18,3 +18,4 @@ The course is worth 5-13 credits, and the content is the same as in the Full sta
 * [React](https://reactjs.org/) - React is a JavaScript library for creating user interfaces
 * [Axios](https://axios-http.com/docs/intro) - Axios is a promise-based HTTP Client for node.js and the browser
 * [Rest Countries API](https://restcountries.com/) - RESTful API to get information about countries
+* [OpenWeather API](https://openweathermap.org/) - API to access current weather data for any location on earth
