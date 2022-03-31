@@ -9,11 +9,16 @@ const Weather = ({ coords }) => {
   const apiKey = process.env.OPEN_WEATHER_API_KEY
   const weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
 
+  console.log('Lat: ', latitude, 'long: ', longitude)
+
   useEffect(() => {
     axios
         .get(weatherApi)
         .then((response) => {
             console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
         })
   }, [])
 

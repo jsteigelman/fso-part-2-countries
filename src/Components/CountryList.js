@@ -1,5 +1,6 @@
-import CountryRecordAdvanced from './CountryBody'
 import Country from './Country'
+import CountryHeader from './CountryHeader'
+import CountryBody from './CountryBody'
 
 const CountryList = ({ filteredCountries }) => {
 
@@ -26,7 +27,7 @@ const CountryList = ({ filteredCountries }) => {
     if (filteredCountries.length === 0) {
       return startMessage
     } else if (filteredCountries.length === 1) {
-      return <CountryRecordAdvanced country={filteredCountries[0]} />
+      return (<div><h3>{filteredCountries[0].name.common}</h3> <CountryBody country={filteredCountries[0]} /></div>)
     } else if (filteredCountries.length > 10) {
       return tryAgainMessage
     } else {
