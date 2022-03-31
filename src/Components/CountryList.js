@@ -1,25 +1,23 @@
-import { useState } from 'react'
-import CountryRecordBasic from './CountryRecordBasic'
 import CountryRecordAdvanced from './CountryRecordAdvanced'
 import Country from './Country'
 
 const CountryList = ({ filteredCountries }) => {
 
-    // manage expanded / collapsed status for each country
-    let expandObject = {}
-    filteredCountries.forEach((country) => {
-        expandObject[country.name.common] = false
-        console.log(`The NEW key is ${country.name.common} and the value is ${expandObject[country.name.common]}`)
-    })
+  // manage expanded / collapsed status for each country record by saving status to object
+  let expandObject = {}
+  filteredCountries.forEach((country) => {
+    expandObject[country.name.common] = false
+    console.log(
+      `The NEW key is ${country.name.common} and the value is ${
+        expandObject[country.name.common]
+      }`
+    )
+  })
 
-//   const filteredResults = filteredCountries.map((country) => <CountryRecordBasic country={country} />)
-const filteredResults = filteredCountries.map((country) => {
-    // expandObject[country.name.common] = false
-    // console.log(`The key is ${country.name.common} and the value is ${expandObject[country.name.common]}`)
-    return <Country country={country} expandObject={expandObject}/>
-})
-
-
+  // return a list of the filtered countries
+  const filteredResults = filteredCountries.map((country) => {
+    return <Country country={country} expandObject={expandObject} />
+  })
 
   const startMessage = 'Get started by entering a search term'
   const tryAgainMessage = `Your search returned ${filteredCountries.length} results. Please narrow your search and try again.`

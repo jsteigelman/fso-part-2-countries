@@ -19,5 +19,4 @@ const Country = ({ country, expandObject }) => {
   )
 }
 
-
 export default Country

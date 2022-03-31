@@ -1,8 +1,8 @@
 const CountryRecordAdvanced = ({ country }) => {
     
+  // display each language included in languages array
   const languages = country.languages
   const listLanguages = () => {
-    console.log('list languages is running')
     for (const language in languages) {
       return <li>{languages[language]}</li>
     }
