@@ -1,4 +1,4 @@
-import CountryRecordAdvanced from './CountryRecordAdvanced'
+import CountryRecordAdvanced from './CountryBody'
 import Country from './Country'
 
 const CountryList = ({ filteredCountries }) => {

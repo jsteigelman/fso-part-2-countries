@@ -1,22 +1,41 @@
 import { useState } from 'react'
-import CountryRecordAdvanced from './CountryRecordAdvanced'
-import CountryRecordBasic from './CountryRecordBasic'
+import CountryBody from './CountryBody'
+import CountryHeader from './CountryHeader'
 
 const Country = ({ country, expandObject }) => {
-    const [expand, setExpand] = useState(expandObject[country.name.common])
+  const [expand, setExpand] = useState(expandObject[country.name.common])
 
-    // expand or collapse country record
-    const toggleExpand = () => {
-        setExpand(!expand)
-    } 
-    
-    const fullRecord = <div><CountryRecordAdvanced country={country} /><button onClick={toggleExpand}>Collapse Record</button></div>
-    const partialRecord = <div><CountryRecordBasic country={country} expandObject={expandObject} /> <button onClick={toggleExpand}>Show Full Record</button></div>
-    const displayRecord = expand ? (fullRecord) : (partialRecord)
+  // expand or collapse country record
+  const toggleExpand = () => {
+    setExpand(!expand)
+  }
 
-  return (
-    displayRecord
+  const fullRecord = (
+    <div>
+      <CountryHeader
+        expand={expand}
+        setExpand={setExpand}
+        country={country}
+        // expandObject={expandObject}
+      />
+      <CountryBody country={country} />
+    </div>
   )
+
+  const partialRecord = (
+    <div>
+      <CountryHeader
+        expand={expand}
+        setExpand={setExpand}
+        country={country}
+        // expandObject={expandObject}
+      />{' '}
+    </div>
+  )
+
+  const displayRecord = expand ? fullRecord : partialRecord
+
+  return displayRecord
 }
 
 export default Country

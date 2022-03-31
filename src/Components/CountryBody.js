@@ -1,4 +1,6 @@
-const CountryRecordAdvanced = ({ country }) => {
+import Weather from './Weather'
+
+const CountryBody = ({ country }) => {
     
   // display each language included in languages array
   const languages = country.languages
@@ -10,7 +12,6 @@ const CountryRecordAdvanced = ({ country }) => {
 
   return (
     <div>
-      <h3>{country.name.common}</h3>
       <p>The capital city is {country.capital}</p>
       <p>Area: {country.area}</p>
       <p>The languages spoken include:</p>
@@ -18,8 +19,9 @@ const CountryRecordAdvanced = ({ country }) => {
       <img src={country.flags.png} alt='The country flag' width="200"/>
       <br />
       <img src={country.coatOfArms.png} alt="The country coat of arms" width="100" />
-    </div>
+      <Weather coords={country.latlng} />
+      </div>
   )
 }
 
-export default CountryRecordAdvanced
+export default CountryBody
