@@ -1,6 +1,7 @@
 import Country from './Country'
 import CountryHeader from './CountryHeader'
 import CountryBody from './CountryBody'
+import './CountryList.css'
 
 const CountryList = ({ filteredCountries }) => {
 
@@ -8,16 +9,11 @@ const CountryList = ({ filteredCountries }) => {
   let expandObject = {}
   filteredCountries.forEach((country) => {
     expandObject[country.name.common] = false
-    console.log(
-      `The NEW key is ${country.name.common} and the value is ${
-        expandObject[country.name.common]
-      }`
-    )
   })
 
   // return a list of the filtered countries
   const filteredResults = filteredCountries.map((country) => {
-    return <Country country={country} expandObject={expandObject} />
+    return <Country key={country.name.common} country={country} expandObject={expandObject} />
   })
 
   const startMessage = 'Get started by entering a search term'
@@ -31,7 +27,7 @@ const CountryList = ({ filteredCountries }) => {
     } else if (filteredCountries.length > 10) {
       return tryAgainMessage
     } else {
-      return <ul>{filteredResults}</ul>
+      return <ul className="countryList">{filteredResults}</ul>
     }
   }
 

@@ -1,40 +1,33 @@
 import { useState } from 'react'
 import CountryBody from './CountryBody'
 import CountryHeader from './CountryHeader'
+import './Country.css'
 
 const Country = ({ country, expandObject }) => {
   const [expand, setExpand] = useState(expandObject[country.name.common])
 
-  // expand or collapse country record
-  const toggleExpand = () => {
-    setExpand(!expand)
-  }
-
   const fullRecord = (
-    <div>
+    <div className="countryContainer">
       <CountryHeader
         expand={expand}
         setExpand={setExpand}
         country={country}
-        // expandObject={expandObject}
       />
       <CountryBody country={country} />
     </div>
   )
 
   const partialRecord = (
-    <div>
+    <div className="countryContainer">
       <CountryHeader
         expand={expand}
         setExpand={setExpand}
         country={country}
-        // expandObject={expandObject}
       />{' '}
     </div>
   )
 
   const displayRecord = expand ? fullRecord : partialRecord
-
   return displayRecord
 }
 

@@ -1,17 +1,21 @@
+import './CountryHeader.css'
+import expandButton from './../images/expand_button.png'
+import collapseButton from './../images/collapse_button.png'
+
 const CountryHeader = ({ country, expand, setExpand }) => {
-  
   // expand or collapse country record
   const toggleExpand = () => {
     setExpand(!expand)
-    console.log('Expand value is ', expand)
   }
 
-  const buttonText = expand ? 'Close Record' : 'Open Record'
+  const displayButton = expand ? collapseButton : expandButton
 
   return (
-    <li key={country.name.common}>
+    <li key={country.name.common} className='countryHeader'>
       <h3>{country.name.common}</h3>
-      <button onClick={toggleExpand}>{buttonText}</button>
+      <div className="expandImageContainer">
+        <img onClick={toggleExpand} src={displayButton} alt='expand' />
+      </div>
     </li>
   )
 }

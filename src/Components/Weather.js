@@ -1,32 +1,43 @@
 
-import {useEffect} from 'react'
+import { useState, useEffect } from 'react'
 const axios = require('axios')
 
-const Weather = ({ coords }) => {
+const Weather = ({ capital, coords }) => {
 
-  const latitude = coords[0]
-  const longitude = coords[1]
-  const apiKey = process.env.OPEN_WEATHER_API_KEY
-  const weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`
+  const [weatherObject, setWeatherObject] = useState('')
+  const [temp, setTemp] = useState('')
+  // const weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${coords[0]}&lon=${coords[1]}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+  const weatherStackApi = `http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_API_KEY}&query=${capital}`
+  
 
-  console.log('Lat: ', latitude, 'long: ', longitude)
+  console.log('key is: ', weatherStackApi)
+  let displayWeather = 'Loading...'
 
   useEffect(() => {
-    axios
-        .get(weatherApi)
-        .then((response) => {
-            console.log(response)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-  }, [])
+    axios.get(weatherStackApi)
+    .then((response) => {
+      const weatherResponse = response.data
+      setWeatherObject(weatherResponse)
+      setTemp(weatherResponse) 
+    .catch((error) => {
+      console.log(error)
+    })
+  }, [displayWeather])
+
+  displayWeather = (
+    <p>Temperature: {temp}</p>
+  )
+})
+
+console.log('WeatherObject: ', weatherObject)
 
   return (
     <div>
-      <p>Weather data goes here...</p>
+    <h3>Weather for {capital}</h3>
+    <p>{ weatherObject.length < 1 ? 'Loading...' : displayWeather}</p>
     </div>
   )
+
 }
 
 export default Weather

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './App.css'
 import CountryList from './Components/CountryList'
 import SearchForm from './Components/SearchForm'
 const axios = require('axios')
@@ -13,12 +14,14 @@ const App = () => {
   useEffect(() => {
     axios.get(countriesApi).then((response) => {
       const countries = response.data
+      // console.log(countries)
       setCountries(countries)
     })
   }, [])
 
   return (
-    <div>
+    <div className="app">
+      <div className="appContainer">
       <h1>Country Search App</h1>
 
       <h2>Search </h2>
@@ -31,6 +34,7 @@ const App = () => {
 
       <h2>Results</h2>
       <CountryList filteredCountries={filteredCountries} />
+      </div>  
     </div>
   )
 }

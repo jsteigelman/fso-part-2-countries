@@ -1,0 +1,9 @@
+.countryContainer {
+    background-image: linear-gradient(#0F1417, #1B2028);
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+    padding: 0px 12px;
+    border-radius: 12px;
+}
+

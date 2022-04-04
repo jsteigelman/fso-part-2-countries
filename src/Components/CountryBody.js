@@ -1,7 +1,8 @@
 import Weather from './Weather'
+import { useState } from 'react'
+import './CountryBody.css'
 
 const CountryBody = ({ country }) => {
-    
   // display each language included in languages array
   const languages = country.languages
   const listLanguages = () => {
@@ -10,17 +11,17 @@ const CountryBody = ({ country }) => {
     }
   }
 
+  // <Weather capital={country.capital} coords={country.capitalInfo.latlng} />
+
   return (
-    <div>
+    <div className='countryBody'>
       <p>The capital city is {country.capital}</p>
       <p>Area: {country.area}</p>
       <p>The languages spoken include:</p>
       <ul>{listLanguages()}</ul>
-      <img src={country.flags.png} alt='The country flag' width="200"/>
+      <img src={country.flags.png} alt='The country flag' width='100' />
       <br />
-      <img src={country.coatOfArms.png} alt="The country coat of arms" width="100" />
-      <Weather coords={country.latlng} />
-      </div>
+    </div>
   )
 }
 
