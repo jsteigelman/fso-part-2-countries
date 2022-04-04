@@ -16,5 +16,29 @@ body {
     padding: 0 10px;
     width: calc(100% - 20px);
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
     /* background-color: white; */
+}
+
+.appHeader {
+    background-image: url('./images/globe_icon.png');
+    padding: 4px;
+    background-color: #030505; /* Used if the image is unavailable */
+    height: 120px; /* You must set a specified height */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    z-index: 1;
+    position: fixed;
+}
+
+.appHeader h1 {
+    z-index: 99;
+    margin-bottom: 0;
+}
+
+.appBody {
+    margin-top: 148px;
 }

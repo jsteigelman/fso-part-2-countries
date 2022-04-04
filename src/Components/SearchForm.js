@@ -1,3 +1,5 @@
+import './SearchForm.css'
+
 const SearchForm = ({ countries, setFilteredCountries, searchTerm, setSearchTerm }) => {
 
   const handleFilter = (event) => {
@@ -16,7 +18,7 @@ const SearchForm = ({ countries, setFilteredCountries, searchTerm, setSearchTerm
 
   return (
     <form onSubmit={applyFilter}>
-      <input type='text' value={searchTerm} onChange={handleFilter} />
+      <input type='text' value={searchTerm} onChange={handleFilter} className="searchForm" placeholder="Search for a country..." />
     </form>
   )
 }

@@ -19,7 +19,10 @@ const CountryBody = ({ country }) => {
       <p>Area: {country.area}</p>
       <p>The languages spoken include:</p>
       <ul>{listLanguages()}</ul>
-      <img src={country.flags.png} alt='The country flag' width='100' />
+      <div className="flagImageContainer">
+      <img src={country.flags.png} alt='The country flag' />
+
+      </div>
       <br />
     </div>
   )

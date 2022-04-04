@@ -16,16 +16,16 @@ const CountryList = ({ filteredCountries }) => {
     return <Country key={country.name.common} country={country} expandObject={expandObject} />
   })
 
-  const startMessage = 'Get started by entering a search term'
+  const startMessage = 'Get started by entering a search term!'
   const tryAgainMessage = `Your search returned ${filteredCountries.length} results. Please narrow your search and try again.`
 
   const results = () => {
     if (filteredCountries.length === 0) {
-      return startMessage
+      return <p className="searchMessage"> {startMessage} </p>
     } else if (filteredCountries.length === 1) {
       return (<div><h3>{filteredCountries[0].name.common}</h3> <CountryBody country={filteredCountries[0]} /></div>)
     } else if (filteredCountries.length > 10) {
-      return tryAgainMessage
+      return <p className="searchMessage"> {tryAgainMessage} </p>
     } else {
       return <ul className="countryList">{filteredResults}</ul>
     }

@@ -1,0 +1,16 @@
+.searchForm {
+    width: calc(100% - 15px);
+    border: none;
+    height: 30px;
+    border-radius: 16px;
+    margin: 3px;
+    padding-left: 10px;
+
+}
+
+input.searchForm:focus {
+    background-color: #fff;
+    outline: none !important;
+    border: 3px solid #44AF6B;
+    margin: 0;
+}

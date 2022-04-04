@@ -3,3 +3,16 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+.flagImageContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.flagImageContainer img {
+    width: 100%;
+}

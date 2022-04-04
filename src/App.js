@@ -20,21 +20,23 @@ const App = () => {
   }, [])
 
   return (
-    <div className="app">
-      <div className="appContainer">
-      <h1>Country Search App</h1>
+    <div className='app'>
+      <div className='appContainer'>
+        <div className='appHeader'>
+          <h1>Where in the World</h1>
 
-      <h2>Search </h2>
-      <SearchForm
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        countries={countries}
-        setFilteredCountries={setFilteredCountries}
-      />
+          <SearchForm
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            countries={countries}
+            setFilteredCountries={setFilteredCountries}
+          />
+        </div>
+        <div className="appBody">
+        <CountryList filteredCountries={filteredCountries} />
 
-      <h2>Results</h2>
-      <CountryList filteredCountries={filteredCountries} />
-      </div>  
+        </div>
+      </div>
     </div>
   )
 }
