@@ -7,7 +7,7 @@ const Country = ({ country, expandObject }) => {
   const [expand, setExpand] = useState(expandObject[country.name.common])
 
   const fullRecord = (
-    <div className="countryContainer">
+    <div className="countryContainer" onClick={() => setExpand(!expand)}>
       <CountryHeader
         expand={expand}
         setExpand={setExpand}
@@ -18,7 +18,7 @@ const Country = ({ country, expandObject }) => {
   )
 
   const partialRecord = (
-    <div className="countryContainer">
+    <div className="countryContainer" onClick={() => setExpand(!expand)}>
       <CountryHeader
         expand={expand}
         setExpand={setExpand}
@@ -26,7 +26,6 @@ const Country = ({ country, expandObject }) => {
       />{' '}
     </div>
   )
-
   const displayRecord = expand ? fullRecord : partialRecord
   return displayRecord
 }

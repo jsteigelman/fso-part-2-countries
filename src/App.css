@@ -21,26 +21,30 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start
-    /* background-color: white; */
 }
 
 .appHeader {
-    background-image: url('./images/globe_icon.png');
-    background-image: url('./images/globe_icon_2.png');
-    /* background-image: url('./images/globe_icon_3.png'); */
-    text-shadow: 2px 2px #030505;
-
-    padding: 4px;
     background-color: #030505; /* Used if the image is unavailable */
-    height: 120px; /* You must set a specified height */
-    background-position: top; 
+    background-image: url('./images/nasa_image.jpg');
+    background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
-    z-index: 1;
+    height: 140px; /* You must set a specified height */
+    padding: 4px;
     position: sticky;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .appHeader h1 {
     z-index: 99;
     margin-bottom: 0;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 2px 2px 5px #030505;
+
+
 }

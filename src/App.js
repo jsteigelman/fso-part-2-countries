@@ -23,7 +23,7 @@ const App = () => {
     <div className='app'>
       <div className='appContainer'>
         <div className='appHeader'>
-          <h1>Where in the World</h1>
+          <h1>Worldly Wise</h1>
 
           <SearchForm
             searchTerm={searchTerm}
