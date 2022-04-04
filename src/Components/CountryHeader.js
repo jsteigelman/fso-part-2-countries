@@ -12,8 +12,11 @@ const CountryHeader = ({ country, expand, setExpand }) => {
 
   return (
     <li key={country.name.common} className='countryHeader'>
-      <h3>{country.name.common}</h3>
-      <div className="expandImageContainer">
+      <div className="countryHeader__text">
+        <h3>{country.name.common}</h3>
+        <p className='countryRegion'>{country.subregion}</p>
+      </div>
+      <div className='expandImageContainer'>
         <img onClick={toggleExpand} src={displayButton} alt='expand' />
       </div>
     </li>

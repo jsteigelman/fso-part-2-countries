@@ -32,7 +32,7 @@ const App = () => {
             setFilteredCountries={setFilteredCountries}
           />
         </div>
-        <div className="appBody">
+        <div>
         <CountryList filteredCountries={filteredCountries} />
 
         </div>

@@ -1,6 +1,17 @@
 .countryBody {
+    color: #69707E;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: .82;
+}
+
+.countryBody p {
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.countryBodyHighlight {
     color: #BDBCBF;
-    font-size: 18px;
     font-weight: 500;
 }
 

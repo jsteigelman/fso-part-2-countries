@@ -7,3 +7,7 @@
     border-radius: 12px;
 }
 
+.countryContainer:hover {
+    background-image: none;
+   background-color:#44af6b;
+}

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
     background-color: #030505;
     color: white;
-    font-family: Helvetica, Arial, sans-serif
+    font-family: 'Inter', sans-serif;
 }
 
 .app {
@@ -24,21 +26,21 @@ body {
 
 .appHeader {
     background-image: url('./images/globe_icon.png');
+    background-image: url('./images/globe_icon_2.png');
+    /* background-image: url('./images/globe_icon_3.png'); */
+    text-shadow: 2px 2px #030505;
+
     padding: 4px;
     background-color: #030505; /* Used if the image is unavailable */
     height: 120px; /* You must set a specified height */
-    background-position: center; 
+    background-position: top; 
     background-repeat: no-repeat; 
     background-size: cover; 
     z-index: 1;
-    position: fixed;
+    position: sticky;
 }
 
 .appHeader h1 {
     z-index: 99;
     margin-bottom: 0;
-}
-
-.appBody {
-    margin-top: 148px;
 }

@@ -15,10 +15,10 @@ const CountryBody = ({ country }) => {
 
   return (
     <div className='countryBody'>
-      <p>The capital city is {country.capital}</p>
-      <p>Area: {country.area}</p>
-      <p>The languages spoken include:</p>
-      <ul>{listLanguages()}</ul>
+      <p>The capital city is <span className="countryBodyHighlight">{country.capital}</span></p>
+      <p>The area is <span className="countryBodyHighlight">{country.area}</span></p>
+      <p>The official languages include:</p>
+      <ul className="countryBodyHighlight">{listLanguages()}</ul>
       <div className="flagImageContainer">
       <img src={country.flags.png} alt='The country flag' />
 

@@ -9,6 +9,23 @@ li.countryHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 20px 0;
+}
+
+.countryHeader__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countryHeader__text h3 {
+    margin: 0;
+}
+
+.countryRegion {
+    color: #69707E;
+    margin: 4px 0 0;
+    font-size: 14px;
 }
 
 .expandImageContainer {
