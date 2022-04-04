@@ -8,12 +8,12 @@ The course covers testing, configuration and environment management, and the use
 
 The course is worth 5-13 credits, and the content is the same as in the Full stack course held at the Department of Computer Science at the University of Helsinki in Spring 2020. There is also an associated project that is worth 1-10 credits.
 
-<!-- ## Live Site URL
+## Live Site URL
+The project is deployed on Netlify: [https://steigelman-countries.netlify.app/](https://steigelman-countries.netlify.app/)
+
+<!-- ## Website Preview -->
 
 
-## Website Preview
-
- -->
 ## Built With
 * [React](https://reactjs.org/) - React is a JavaScript library for creating user interfaces
 * [Axios](https://axios-http.com/docs/intro) - Axios is a promise-based HTTP Client for node.js and the browser
