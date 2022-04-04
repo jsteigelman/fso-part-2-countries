@@ -29,13 +29,13 @@ body {
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
-    height: 140px; /* You must set a specified height */
+    height: 180px; /* You must set a specified height */
     padding: 4px;
     position: sticky;
     z-index: 1;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
 }
 
