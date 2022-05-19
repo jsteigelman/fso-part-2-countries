@@ -11,6 +11,11 @@ The course is worth 5-13 credits, and the content is the same as in the Full sta
 ## Live Site URL
 The project is deployed on Netlify: [https://steigelman-countries.netlify.app/](https://steigelman-countries.netlify.app/)
 
+## Functionality
+* User can search for a country 
+* User search cannot exceed 10 results
+* Each country record contains data on: region, capital, area, language, flag
+
 ## Website Preview
 <img width="900" alt="Countries-Preview" src="https://user-images.githubusercontent.com/65603938/161616323-b411d6d4-1f2a-4ae4-9076-06216210f7db.png">
 
