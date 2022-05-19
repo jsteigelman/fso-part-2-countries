@@ -1,4 +1,5 @@
 # Full Stack Open - Part 2 (Countries)
+
 This project is currently in progress!
 
 ## About Full Stack Open
@@ -16,12 +17,11 @@ The course is worth 5-13 credits, and the content is the same as in the Full sta
 * User search cannot exceed 10 results
 * Each country record contains data on: region, capital, area, language, flag
 
-## Website Preview
-<img width="900" alt="Countries-Preview" src="https://user-images.githubusercontent.com/65603938/161616323-b411d6d4-1f2a-4ae4-9076-06216210f7db.png">
-
-
 ## Built With
 * [React](https://reactjs.org/) - React is a JavaScript library for creating user interfaces
 * [Axios](https://axios-http.com/docs/intro) - Axios is a promise-based HTTP Client for node.js and the browser
 * [Rest Countries API](https://restcountries.com/) - RESTful API to get information about countries
 * [OpenWeather API](https://openweathermap.org/) - API to access current weather data for any location on earth
+
+## Website Preview
+<img width="900" alt="Countries-Preview" src="https://user-images.githubusercontent.com/65603938/161616323-b411d6d4-1f2a-4ae4-9076-06216210f7db.png">
