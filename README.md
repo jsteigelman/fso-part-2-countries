@@ -13,9 +13,11 @@ The course is worth 5-13 credits, and the content is the same as in the Full sta
 [https://steigelman-countries.netlify.app/](https://steigelman-countries.netlify.app/)
 
 ## Functionality
-* User can search for a country 
-* User search cannot exceed 10 results
-* Each country record contains data on: region, capital, area, language, flag
+* User can retrieve data for various countries by performing a search in the search bar
+* The record for each country contains data on its region, capital, area, languages spoken, and flag
+* If the search returns more than 10 countries that match the query, then the user is prompted to make their query more specific
+* If the search returns ten or fewer countries, but more than one, then all countries matching the query are shown
+* If the search returns exactly one country matching the query, then the basic data of the country is shown
 
 ## Built With
 * [React](https://reactjs.org/) - React is a JavaScript library for creating user interfaces
