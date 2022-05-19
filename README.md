@@ -1,7 +1,7 @@
 # Full Stack Open - Part 2 (Countries)
 
 ## Description
-This app allows you to retrieve data on various countries around the world. Data points include region, capital, area, language, and flag. Enter a country in the search bar to get started. 
+This app allows you to retrieve data on various countries around the world. Data points include region, capital, area, language, and flag. 
 
 ## Live Site URL
 [https://steigelman-countries.netlify.app/](https://steigelman-countries.netlify.app/)
