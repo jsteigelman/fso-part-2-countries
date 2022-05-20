@@ -1,4 +1,4 @@
-# Full Stack Open - Part 2 (Countries)
+# Countries App
 
 ## Description
 This app allows you to retrieve data on various countries around the world. Data points include region, capital, area, language, and flag. 
@@ -17,8 +17,8 @@ This app allows you to retrieve data on various countries around the world. Data
 * [React](https://reactjs.org/) - React is a JavaScript library for creating user interfaces
 * [Axios](https://axios-http.com/docs/intro) - Axios is a promise-based HTTP Client for node.js and the browser
 * [Rest Countries API](https://restcountries.com/) - RESTful API to get information about countries
-* [OpenWeather API](https://openweathermap.org/) - API to access current weather data for any location on earth
-
+<!-- * [OpenWeather API](https://openweathermap.org/) - API to access current weather data for any location on earth
+ -->
 ## About Full Stack Open
 This project was completed for Full Stack Open.
 
